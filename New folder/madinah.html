@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Madinah Dry Fruits & Plastic House</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>🌴</span>
+        <img src="" alt="">
+        Madinah
+        <small>Dry Fruits & Plastic House</small>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" onclick="openCart()">
+        🛒 Cart
+        <span id="cartCount">0</span>
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="welcome">WELCOME TO MADINAH</p>
+
+        <h1>
+            Premium Dry Fruits
+            <br>
+            & Household Products
+        </h1>
+
+        <p>
+            Quality products at affordable prices.
+            Shop your favourite products today.
+        </p>
+
+        <a href="#products" class="hero-button">
+            Shop Now →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories">
+
+    <h2>Shop By Category</h2>
+
+    <div class="category-buttons">
+
+        <button onclick="filterProducts('all')">
+            🛍️ All Products
+        </button>
+
+        <button onclick="filterProducts('dry-fruits')">
+            🥜 Dry Fruits
+        </button>
+
+        <button onclick="filterProducts('plastic')">
+            🏠 Plastic Products
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <div>
+            <p>OUR PRODUCTS</p>
+            <h2>Popular Products</h2>
+        </div>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 Search products..."
+            onkeyup="searchProducts()"
+        >
+
+    </div>
+
+
+    <div class="products-grid" id="productsContainer">
+
+        <!-- Products will be created by JavaScript -->
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-image">
+        🥜
+    </div>
+
+    <div class="about-content">
+
+        <p>ABOUT US</p>
+
+        <h2>
+            Quality You Can
+            <span>Trust</span>
+        </h2>
+
+        <p>
+            Madinah Dry Fruits & Plastic House is committed
+            to providing high-quality dry fruits and useful
+            household products at reasonable prices.
+        </p>
+
+        <p>
+            We believe in quality, freshness and customer
+            satisfaction.
+        </p>
+
+        <a href="#contact" class="hero-button">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading center">
+
+        <p>GET IN TOUCH</p>
+
+        <h2>Contact Us</h2>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <h3>📍 Visit Our Store</h3>
+
+            <p>
+                MADINAH DRY FRUIT AND PLASTIC HOUSE<br>
+             MEHNAGAR, AZAMGARH, UTTAR PRADESH-276204
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>📞 Call Us</h3>
+
+            <p>
+                +91 8795715774
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>🕐 Opening Hours</h3>
+
+            <p>
+                Monday - Sunday<br>
+                9:00 AM - 9:00 PM
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🌴 Madinah Dry Fruits & Plastic House
+    </div>
+
+    <p>
+        © 2026 Madinah Dry Fruits & Plastic House.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+
+        <h2>🛒 Your Cart</h2>
+
+        <button onclick="closeCart()">✕</button>
+
+    </div>
+
+
+    <div id="cartItems">
+
+        <p class="empty-cart">
+            Your cart is empty.
+        </p>
+
+    </div>
+
+
+    <div class="cart-bottom">
+
+        <div class="total">
+
+            <span>Total</span>
+
+            <strong>
+                ₹<span id="cartTotal">0</span>
+            </strong>
+
+        </div>
+
+
+        <button
+            class="checkout-button"
+            onclick="checkoutWhatsApp(+918604311201)"
+        >
+            Order on WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
